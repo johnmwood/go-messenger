@@ -1,7 +1,7 @@
-package main
+package config
 
-import "fmt"
-
-func main() {
-	fmt.Println("vim-go")
+type Config struct {
+	RouterConfig struct {
+		port int
+	}
 }

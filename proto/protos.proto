@@ -1,7 +1,8 @@
 syntax = "proto3";
+
 package proto;
 
-option go_package = "github.com/johnmwood/go-messenger/proto";
+option go_package = "github.com/johnmwood/go-messenger/proto;proto";
 
 message MetricRequest {
     string message = 1;
@@ -11,6 +12,6 @@ message MetricResponse {
     string message = 1;
 }
 
-service MetricsService {
-    rpc ReportMetrics(MetricRequest) returns (MetricResponse);
+service Metrics {
+    rpc ReportMetrics(MetricRequest) returns (MetricResponse) {}
 }
